@@ -1,0 +1,56 @@
+name: 感想・フィードバック
+description: 作品を読んだ感想や気づいた点をお聞かせください
+title: "[感想] "
+labels: ["感想"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感想をお送りいただき、ありがとうございます！
+        どんな小さなことでも、著者にとって大きな励みになります。
+
+  - type: dropdown
+    id: chapter
+    attributes:
+      label: 対象の章・箇所
+      description: 感想に関連する章を選んでください（任意）
+      options:
+        - はじめに・プロローグ
+        - 第一章「転職者」
+        - 第二章「ナプキンの仮説」
+        - 第三章「三つの円」
+        - 第四章「OS」
+        - 第五章「四つの象限」
+        - 第六章「裏返しの鏡」
+        - 第七章「変われるという信念」
+        - 第八章「予言」
+        - 第九章「飛び立つ鳥」
+        - 第十章「崩壊」
+        - 第十一章「手中の鳥」
+        - 第十二章「失敗者の告白」
+        - エピローグ・あとがき
+        - 作品全体
+    validations:
+      required: false
+
+  - type: textarea
+    id: feedback
+    attributes:
+      label: 感想・気づいた点
+      description: 自由にお書きください
+      placeholder: |
+        例：
+        - 第三章のこのセリフが特に刺さりました
+        - 佐伯のキャラクターについて思ったこと
+        - 読んでいて気になった点
+    validations:
+      required: true
+
+  - type: textarea
+    id: about_reader
+    attributes:
+      label: あなたについて（任意）
+      description: 差し支えなければ、ご自身のバックグラウンドをお聞かせください（より良い作品づくりの参考にします）
+      placeholder: 例：年代、職業、この作品を知ったきっかけ など
+    validations:
+      required: false

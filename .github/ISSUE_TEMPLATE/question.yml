@@ -1,0 +1,32 @@
+name: AI制作プロセスへの質問
+description: この作品のAI協働制作プロセスについて質問してください
+title: "[質問] "
+labels: ["質問"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        AI を活用した制作プロセスへのご興味、ありがとうございます！
+        できる範囲でお答えします。
+
+  - type: dropdown
+    id: topic
+    attributes:
+      label: 質問のテーマ
+      options:
+        - プロンプト設計について
+        - 反復改善（バージョン管理）について
+        - キャラクター設計・Bible について
+        - 文体・美学フィルターについて
+        - ツール・環境について
+        - その他
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: 質問内容
+      description: 具体的にお書きください
+    validations:
+      required: true

@@ -1,0 +1,10 @@
+[book]
+title = "失敗者の告白 —— なぜ「ビジネス」は息苦しいのか"
+authors = ["馬場祐平"]
+language = "ja"
+src = "src"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+no-section-label = true

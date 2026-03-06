@@ -1,0 +1,70 @@
+name: 改善提案
+description: 文章表現・構成・内容の改善案をご提案ください
+title: "[提案] "
+labels: ["改善提案"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        改善案をお送りいただき、ありがとうございます。
+        すべての提案を著者が検討しますが、採用・不採用の最終判断は著者（馬場祐平）が行います。
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: 提案の種類
+      options:
+        - 文章表現の改善
+        - シーン・構成の改善
+        - キャラクター描写の改善
+        - AI制作プロセス関連
+        - その他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: chapter
+    attributes:
+      label: 対象の章（任意）
+      options:
+        - はじめに・プロローグ
+        - 第一章「転職者」
+        - 第二章「ナプキンの仮説」
+        - 第三章「三つの円」
+        - 第四章「OS」
+        - 第五章「四つの象限」
+        - 第六章「裏返しの鏡」
+        - 第七章「変われるという信念」
+        - 第八章「予言」
+        - 第九章「飛び立つ鳥」
+        - 第十章「崩壊」
+        - 第十一章「手中の鳥」
+        - 第十二章「失敗者の告白」
+        - エピローグ・あとがき
+        - 作品全体
+    validations:
+      required: false
+
+  - type: textarea
+    id: current
+    attributes:
+      label: 現状（何が気になったか）
+      description: 改善の対象となる現状の記述や状況をお書きください
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案内容
+      description: どのように改善できるかをお書きください
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: 理由・背景（任意）
+      description: なぜそのような改善が良いと思うか、理由があればお書きください
+    validations:
+      required: false

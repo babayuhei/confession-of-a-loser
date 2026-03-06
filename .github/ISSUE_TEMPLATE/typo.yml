@@ -1,0 +1,53 @@
+name: 誤字脱字・表記ミスの報告
+description: テキストの誤りを見つけた場合にご報告ください
+title: "[誤字脱字] "
+labels: ["誤字脱字"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        誤りを見つけていただき、ありがとうございます！
+        可能であれば、修正提案も Pull Request でお送りいただけると助かります。
+
+  - type: dropdown
+    id: chapter
+    attributes:
+      label: 対象の章
+      options:
+        - はじめに
+        - プロローグ
+        - 第一章「転職者」
+        - 第二章「ナプキンの仮説」
+        - 第三章「三つの円」
+        - 第四章「OS」
+        - 第五章「四つの象限」
+        - 第六章「裏返しの鏡」
+        - 第七章「変われるという信念」
+        - 第八章「予言」
+        - 第九章「飛び立つ鳥」
+        - 第十章「崩壊」
+        - 第十一章「手中の鳥」
+        - 第十二章「失敗者の告白」
+        - エピローグ
+        - あとがき
+        - その他（README等）
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_text
+    attributes:
+      label: 現在の（誤った）テキスト
+      description: 誤りのある部分を引用してください
+      placeholder: 「〇〇〇〇〇」
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested_text
+    attributes:
+      label: 修正案（任意）
+      description: 正しいと思われる表記をご提案ください
+      placeholder: 「△△△△△」
+    validations:
+      required: false
